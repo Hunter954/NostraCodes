@@ -44,10 +44,19 @@ a {
   pointer-events: none;
 }
 
+.hero-grid,
 .hero-noise,
 .hero-glow {
   position: absolute;
   inset: 0;
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.3));
 }
 
 .hero-noise {
@@ -217,81 +226,74 @@ a {
   }
 }
 
-.ripple-grid-layer {
+.interactive-grid-bg {
   position: absolute;
   inset: 0;
+  z-index: 0;
   overflow: hidden;
 }
 
-.ripple-grid-base,
-.ripple-grid-fade {
+.interactive-grid-overlay {
   position: absolute;
   inset: 0;
+  pointer-events: none;
 }
 
-.ripple-grid-base {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 72px 72px;
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.36));
-}
-
-.ripple-grid-fade {
-  background:
-    radial-gradient(circle at 50% 36%, rgba(129, 140, 248, 0.16), transparent 0 24%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent 20%);
-}
-
-.ripple-circle {
+.interactive-grid {
   position: absolute;
-  left: 50%;
-  top: 42%;
-  width: min(76vw, 70rem);
+  inset: 0;
+  display: grid;
+  gap: 10px;
+  padding: 22px;
+}
+
+.interactive-grid-cell {
+  display: block;
+  width: 100%;
   aspect-ratio: 1 / 1;
-  border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.11);
-  transform: translate(-50%, -50%) scale(0.72);
-  transform-origin: center;
-  opacity: 0;
-  box-shadow:
-    0 0 90px rgba(94, 92, 230, 0.1),
-    inset 0 0 36px rgba(255, 255, 255, 0.02);
-  animation: rippleWave 11s linear infinite;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  transition:
+    opacity 120ms ease,
+    transform 120ms ease,
+    box-shadow 120ms ease,
+    background 120ms ease,
+    border-color 120ms ease;
 }
 
-.ripple-circle-1 {
-  animation-delay: 0s;
+.interactive-grid-fade {
+  background: linear-gradient(180deg, rgba(5, 8, 22, 0.06), rgba(5, 8, 22, 0.3));
 }
 
-.ripple-circle-2 {
-  animation-delay: 2.75s;
+.interactive-grid-noise {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 22%),
+    radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.08), transparent 30%);
 }
 
-.ripple-circle-3 {
-  animation-delay: 5.5s;
+.interactive-grid-glow-left {
+  background: radial-gradient(circle at 30% 18%, rgba(100, 118, 255, 0.30), transparent 0 24%);
+  filter: blur(26px);
 }
 
-.ripple-circle-4 {
-  animation-delay: 8.25s;
+.interactive-grid-glow-right {
+  background: radial-gradient(circle at 70% 22%, rgba(96, 214, 255, 0.14), transparent 0 18%);
+  filter: blur(40px);
 }
 
-@keyframes rippleWave {
-  0% {
-    transform: translate(-50%, -50%) scale(0.68);
-    opacity: 0;
+.site-header,
+.hero-section {
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
+  .interactive-grid {
+    gap: 8px;
+    padding: 16px;
   }
 
-  10% {
-    opacity: 0.26;
-  }
-
-  58% {
-    opacity: 0.12;
-  }
-
-  100% {
-    transform: translate(-50%, -50%) scale(1.18);
-    opacity: 0;
+  .interactive-grid-cell {
+    border-radius: 6px;
   }
 }
