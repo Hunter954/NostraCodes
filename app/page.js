@@ -5,6 +5,7 @@ export default function HomePage() {
   return (
     <main className="page-shell">
       <div className="hero-background" aria-hidden="true">
+        <div className="hero-grid" />
         <BackgroundRippleEffect />
         <div className="hero-glow hero-glow-left" />
         <div className="hero-glow hero-glow-right" />
