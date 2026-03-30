@@ -1,0 +1,217 @@
+{% extends 'base.html' %}
+{% block title %}Forge | Sistemas sob medida para empresas{% endblock %}
+{% block content %}
+<header class="site-header site-header-solid">
+  <div class="container nav-wrap">
+    <a href="#top" class="brand brand-logo-only" aria-label="Início">
+      <img src="{{ url_for('static', filename='img/logomarca.svg') }}" alt="Logomarca" class="site-logo">
+    </a>
+    <nav class="nav nav-clean">
+      <a href="#solucoes">Soluções</a>
+      <a href="#sistema">Sistema</a>
+      <a href="#processo">Processo</a>
+      <a href="#contato" class="btn btn-outline">Solicitar projeto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="landing-v2">
+  <section class="hero-v2">
+    <div class="hero-v2-ripple" aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <div class="container hero-v2-inner">
+      <div class="hero-v2-copy">
+        <div class="hero-v2-kicker">UI premium · automações · sistemas únicos</div>
+        <h1>
+          <span>O próximo nível</span>
+          <span>da sua empresa.</span>
+        </h1>
+        <p>Transforme sua operação em uma experiência mais forte, moderna e profissional.</p>
+        <div class="hero-v2-actions">
+          <a href="#contato" class="btn btn-primary">Solicitar projeto</a>
+          <a href="#sistema" class="btn btn-hover-gradient"><span>Demonstração</span></a>
+        </div>
+      </div>
+
+      <div id="sistema" class="hero-v2-system">
+        <div class="hero-v2-system-glow"></div>
+        <div class="hero-v2-shell">
+          <div class="hero-v2-shell-top">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="hero-v2-app">
+            <aside class="hero-v2-sidebar">
+              <div class="hero-v2-side-logo">F</div>
+              <a class="active">Overview</a>
+              <a>Operação</a>
+              <a>Financeiro</a>
+              <a>Equipe</a>
+              <a>Automações</a>
+            </aside>
+            <div class="hero-v2-content">
+              <div class="hero-v2-content-head">
+                <div>
+                  <small>Sistema proprietário</small>
+                  <strong>Interface premium para empresas reais</strong>
+                </div>
+                <div class="hero-v2-user">
+                  <div class="hero-v2-user-avatar">KP</div>
+                  <div>
+                    <b>Cliente premium</b>
+                    <span>Tema personalizável</span>
+                  </div>
+                </div>
+              </div>
+              <div class="hero-v2-kpis">
+                <div class="hero-v2-kpi">
+                  <span>Performance</span>
+                  <strong>+148%</strong>
+                  <small>Leads qualificados</small>
+                </div>
+                <div class="hero-v2-kpi">
+                  <span>Operação</span>
+                  <strong>-37h</strong>
+                  <small>Economia por mês</small>
+                </div>
+                <div class="hero-v2-kpi">
+                  <span>Receita</span>
+                  <strong>R$ 58k</strong>
+                  <small>Em tempo real</small>
+                </div>
+              </div>
+              <div class="hero-v2-panels">
+                <div class="hero-v2-chart">
+                  <div class="hero-v2-panel-head"><b>Performance</b><span>30 dias</span></div>
+                  <div class="hero-v2-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                </div>
+                <div class="hero-v2-feed">
+                  <div class="hero-v2-panel-head"><b>Automações</b><span>Ao vivo</span></div>
+                  <ul>
+                    <li>Resumo diário para gestão</li>
+                    <li>Follow-up automático de orçamento</li>
+                    <li>Alertas internos da operação</li>
+                    <li>Notificações para equipe</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-v2-mobilebar">
+            <span class="active">Início</span>
+            <span>Pedidos</span>
+            <span>Relatórios</span>
+            <span>Perfil</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="solucoes" class="section container section-v2">
+    <div class="section-v2-head center">
+      <span class="eyebrow eyebrow-center">O que sua empresa pode ter</span>
+      <h2>Projetos sob medida para vender melhor, operar melhor e parecer maior.</h2>
+    </div>
+    <div class="cards-v2-grid">
+      <article class="cards-v2-item glass-soft">
+        <div class="cards-v2-icon"></div>
+        <h3>Sistemas internos</h3>
+        <p>Patrimonial, processos, cadastros, equipes, relatórios e fluxos que fazem a operação trabalhar com mais controle.</p>
+      </article>
+      <article class="cards-v2-item glass-soft">
+        <div class="cards-v2-icon"></div>
+        <h3>Dashboards premium</h3>
+        <p>Leitura rápida para gestores com visual moderno, dados claros e experiência que transmite tecnologia de verdade.</p>
+      </article>
+      <article class="cards-v2-item glass-soft">
+        <div class="cards-v2-icon"></div>
+        <h3>Landing pages</h3>
+        <p>Páginas com percepção premium, chamadas fortes e estrutura feita para transformar visita em orçamento.</p>
+      </article>
+      <article class="cards-v2-item glass-soft">
+        <div class="cards-v2-icon"></div>
+        <h3>Automações</h3>
+        <p>WhatsApp, alertas, resumos, follow-up e fluxos para reduzir tarefas manuais e acelerar sua empresa.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section-v2-alt">
+    <div class="container showcase-v2">
+      <div class="showcase-v2-copy">
+        <span class="eyebrow">Personalização visual</span>
+        <h2>O cliente precisa se imaginar usando o próprio sistema.</h2>
+        <p>Por isso o site vende design premium, estrutura real e tecnologia adaptada ao fluxo de cada empresa.</p>
+        <ul class="showcase-v2-list">
+          <li>Tema escuro premium</li>
+          <li>Módulos sob medida</li>
+          <li>Experiência com cara de produto próprio</li>
+        </ul>
+      </div>
+      <div class="showcase-v2-card glass">
+        <div class="theme-switcher">
+          <button class="color-dot active" data-theme="violet"></button>
+          <button class="color-dot cyan" data-theme="cyan"></button>
+          <button class="color-dot gold" data-theme="gold"></button>
+          <button class="color-dot green" data-theme="green"></button>
+        </div>
+        <div class="showcase-v2-mini">
+          <div class="showcase-v2-mini-sidebar"></div>
+          <div class="showcase-v2-mini-main">
+            <div class="showcase-v2-mini-top"></div>
+            <div class="showcase-v2-mini-kpis">
+              <i></i><i></i><i></i>
+            </div>
+            <div class="showcase-v2-mini-body">
+              <i></i><i></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="processo" class="section container process-v2">
+    <div class="section-v2-head center">
+      <span class="eyebrow eyebrow-center">Como funciona</span>
+      <h2>Da ideia ao sistema certo.</h2>
+    </div>
+    <div class="process-v2-grid">
+      <article class="process-v2-item glass-soft"><b>01</b><h3>Diagnóstico</h3><p>Entendemos sua operação, gargalos e objetivo comercial.</p></article>
+      <article class="process-v2-item glass-soft"><b>02</b><h3>Direção visual</h3><p>Criamos a experiência e o visual do sistema para sua realidade.</p></article>
+      <article class="process-v2-item glass-soft"><b>03</b><h3>Desenvolvimento</h3><p>Transformamos a ideia em um projeto funcional, moderno e escalável.</p></article>
+    </div>
+  </section>
+
+  <section id="contato" class="section container contact-v2">
+    <div class="contact-v2-wrap glass">
+      <div class="contact-v2-copy">
+        <span class="eyebrow">Solicite seu projeto</span>
+        <h2>Seu sistema começa aqui.</h2>
+        <p>Conte o que sua empresa precisa e vamos desenhar uma solução exclusiva para operação, venda e autoridade de marca.</p>
+      </div>
+      <form class="contact-v2-form" method="post">
+        <div class="form-grid">
+          <label><span>Nome</span><input type="text" name="name" placeholder="Seu nome" required></label>
+          <label><span>Empresa</span><input type="text" name="company" placeholder="Nome da empresa"></label>
+          <label><span>WhatsApp</span><input type="text" name="phone" placeholder="(00) 00000-0000" required></label>
+          <label><span>E-mail</span><input type="email" name="email" placeholder="voce@empresa.com"></label>
+          <label class="full"><span>Tipo de projeto</span>
+            <select name="project_type" required>
+              <option value="">Selecione</option>
+              <option>Sistema interno</option>
+              <option>Dashboard</option>
+              <option>Landing page</option>
+              <option>Site institucional</option>
+              <option>Automação</option>
+            </select>
+          </label>
+          <label class="full"><span>Mensagem</span><textarea name="message" rows="4" placeholder="Fale um pouco sobre o projeto"></textarea></label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Solicitar projeto</button>
+      </form>
+    </div>
+  </section>
+</main>
+{% endblock %}
